@@ -1,0 +1,107 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
+    font-family: sans-serif;
+}
+
+.container {
+    margin: auto;
+    width: 75%;
+    height: 90%;
+    min-width: 1000px;
+}
+
+.left,
+.right {
+    height: 100%;
+}
+
+.left {
+    width: 35%;
+    border-right: 1px solid blue;
+}
+
+.right {
+    width: 65%;
+}
+
+
+.left .header,
+.right .header {
+    height: 60px;
+    background-color: rgb(234, 234, 234);
+}
+
+.left .notifications {
+    height: 70px;
+    background-color: rgb(142, 218, 252);
+}
+
+.left .nav-search {
+    height: 50px;
+    background-color: beige;
+    border: 1px solid transparent;
+}
+
+.left .contacts {
+    height: calc(100% - 60px - 70px - 50px);
+    overflow-y: auto;
+    background-color: white;
+}
+
+.right .messages {
+    height: calc(100% - 60px - 60px);
+    overflow-y: auto;
+    background-image: url('img/mine.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.right .footer {
+    height: 60px;
+    background-color: rgb(243, 238, 234);
+}
+
+.header img,
+.contacts img {
+    width: 47px;
+}
+
+.header i {
+    color: rgb(177, 177, 177);
+    font-size: 20px;
+}
+
+.footer i {
+    color: rgb(134, 165, 188);
+    font-size: 20px;
+}
+
+
+.special {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.fa-solid, a, .fa-search {
+    color: rgb(134, 165, 188);
+}
+
+
+h6 {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(177, 177, 177);
+}
+
+.input-group-text {
+    background-color: white;
+}
+
+.form-control {
+    border: 1px solid transparent;
+    width: 85%;
+}

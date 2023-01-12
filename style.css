@@ -19,13 +19,12 @@ body {
 
 .left {
     width: 35%;
-    border-right: 1px solid blue;
+    border-right: 1px solid grey;
 }
 
 .right {
     width: 65%;
 }
-
 
 .left .header,
 .right .header {
@@ -42,6 +41,16 @@ body {
     height: 50px;
     background-color: beige;
     border: 1px solid transparent;
+}
+
+.left .nav-search .input-group {
+    width: 98%;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+.input-group-text{
+ border: 0;
 }
 
 .left .contacts {
@@ -104,4 +113,17 @@ h6 {
 .form-control {
     border: 1px solid transparent;
     width: 85%;
+}
+
+.sixe-text {
+    font-size: 15px;
+}
+
+.mess-out {
+    background-color: rgb(213,249,186);
+
+}
+
+.mess-in {
+    background-color: white;
 }

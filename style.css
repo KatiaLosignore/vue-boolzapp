@@ -49,8 +49,8 @@ body {
     padding: 2px;
 }
 
-.input-group-text{
- border: 0;
+.input-group-text {
+    border: 0;
 }
 
 .left .contacts {
@@ -87,7 +87,6 @@ body {
     font-size: 20px;
 }
 
-
 .special {
     width: 50px;
     height: 50px;
@@ -95,15 +94,19 @@ body {
     border-radius: 50%;
 }
 
-.fa-solid, a, .fa-search {
+.fa-solid, a,
+.fa-search {
     color: rgb(134, 165, 188);
 }
 
-
-h6 {
+small {
     font-size: 13px;
-    font-weight: bold;
     color: rgb(177, 177, 177);
+}
+
+.list-hover:hover {
+    cursor: pointer;
+    background-color: lightgray;
 }
 
 .input-group-text {
@@ -119,11 +122,27 @@ h6 {
     font-size: 15px;
 }
 
-.mess-out {
-    background-color: rgb(213,249,186);
-
+.position-text {
+    position: relative;
 }
 
-.mess-in {
+.text-small {
+    position: absolute;
+    bottom: 8px;
+    right: 27px;
+    font-size: 10px;
+}
+
+.sent, .received {
+    width: 250px;
+}
+
+.sent{
+    background-color: rgb(213, 249, 186);  
+}
+
+.received {
     background-color: white;
 }
+
+

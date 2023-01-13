@@ -119,7 +119,7 @@
 
                 <div class="footer w-100 d-flex justify-content-between align-items-center">
                     <i class="fa-regular fa-face-smile ms-3"></i>
-                    <input type="text" class="form-control sixe-text" aria-label="Text input with radio button" placeholder="Scrivi un messaggio">
+                    <input type="text" class="form-control sixe-text" aria-label="Text input with radio button" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addMessage">
                     <i class="fa-solid fa-microphone me-3"></i>
 
                 </div>

@@ -7,7 +7,7 @@ const app = Vue.createApp({
         return {
           currentIndex: 0,
           user: {
-            name: 'Nome Utente',
+            name: 'Katia',
             avatar: '_io'
           }, 
           contacts: [

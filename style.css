@@ -59,6 +59,7 @@ body {
     background-color: white;
 }
 
+
 .right .messages {
     height: calc(100% - 60px - 60px);
     overflow-y: auto;
@@ -154,6 +155,11 @@ small {
 .delete-message, .message-info {
     font-size: 15px;
     cursor: pointer;
+}
+
+.text-contact {
+    color: lightgray;
+    font-size: 14px;
 }
 
 .position-text p:hover .fa-chevron-down{

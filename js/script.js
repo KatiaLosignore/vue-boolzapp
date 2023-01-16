@@ -8,6 +8,10 @@ const app = Vue.createApp({
       currentIndex: 0,
       newMessage: '',
       searchContact: '',
+      messageActive: {
+        index: false,
+        show: false
+      },
       user: {
         name: 'Katia',
         avatar: '_io'
@@ -137,6 +141,19 @@ const app = Vue.createApp({
           });
         }, 1000);
       }
+    },
+    showOption(index) {
+      if (this.messageActive.index !== false && this.messageActive.index !== index) {
+        this.messageActive.show = false;
+        this.messageActive.index = false;
+      }
+      this.messageActive.show = !this.messageActive.show;
+      this.messageActive.index = index;
+    },
+    deleteMessage(index) {
+      this.currentChat.splice(index, 1);
+      this.messageActive.show = false;
+      this.messageActive.index = false;
     }
   },
  

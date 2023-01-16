@@ -112,7 +112,11 @@
                         <div class="position-text">
                             <p class="small p-3 ms-4 me-4 mb-2 text-dark rounded-3" :class="{'sent' : message.status === 'sent' , 'received' : message.status === 'received' }"> {{ message.text }}
                                 <small class="text-small">{{ getCurrentMoment() }}</small>
-                              
+                                <i class="fa fa-chevron-down f-right message-option" @click="showOption(i)"></i>
+                                <div class="message-options" v-if="messageActive.show && messageActive.index === i">
+                                    <div class="message-info">Message info</div>
+                                    <div class="delete-message" @click="deleteMessage(i)">Delete message</div>
+                                </div>
                             </p>
                         </div>
                         

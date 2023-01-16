@@ -122,7 +122,7 @@ small {
     font-size: 15px;
 }
 
-.position-text p {
+.position-text, .position-text p {
     position: relative;
 }
 
@@ -133,7 +133,32 @@ small {
     font-size: 10px;
 }
 
+.fa-chevron-down{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: lightgray;
+    display: none;
+}
 
+.message-options {
+    position: absolute;
+    top: 19px;
+    right: 5px;
+    width: 150px;
+    height: 70px;
+    padding: 13px;
+    background-color: white;
+}
+
+.delete-message, .message-info {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.position-text p:hover .fa-chevron-down{
+   display: block;
+}
 
 .sent, .received {
     width: 250px;

@@ -7,6 +7,7 @@ const app = Vue.createApp({
     return {
       currentIndex: 0,
       newMessage: '',
+      searchContact: '',
       user: {
         name: 'Katia',
         avatar: '_io'
@@ -101,7 +102,18 @@ const app = Vue.createApp({
     },
     currentChat() {
       return this.currentContact.messages;
-    }
+    },
+    filteredContacts() {
+      this.contacts.forEach((contact) => {
+        if (contact.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
+          contact.visible = true;
+        } else {
+          contact.visible = false;
+        }
+      
+      });
+    },
+    
   },
   methods: {
     buildAvatarUrl(avatar) {
@@ -120,7 +132,7 @@ const app = Vue.createApp({
         setTimeout(() => {
           this.currentChat.push({
             text: 'ok',
-            date: this.getCurrentMoment,
+            date: this.getCurrentMoment(),
             status: 'received'
           });
         }, 1000);

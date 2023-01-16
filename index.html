@@ -65,14 +65,14 @@
                         <div class="input-group-text">
                             <i class="fa fa-search"></i>
                         </div>
-                        <input type="text" class="form-control sixe-text" aria-label="Text input with radio button" placeholder="Cerca o inizia nuova chat">
+                        <input type="text" class="form-control sixe-text" aria-label="Text input with radio button" placeholder="Cerca o inizia nuova chat" v-model="searchContact" @keyup="filteredContacts">
                     </div>
 
                 </div>
-
+              
                 <div class="contacts w-100">
-                    <div v-for="(contact, i) in contacts" @click="setCurrentIndex(i)">
-                        <div class="d-flex mt-3 list-hover">
+                    <div v-for="(contact, i) in contacts" @click="setCurrentIndex(i)"> 
+                        <div class="d-flex mt-3 list-hover" v-if="contact.visible">
                             <img class="img-fluid rounded-5 ms-3" :src="buildAvatarUrl(contact.avatar)" :alt="contact.name">
                             <span class="contact-name ms-2 mb-2">{{ contact.name }}</span>
                         </div>
@@ -108,10 +108,12 @@
                 </div>
 
                 <div class="messages w-100">
-                    <div class="d-flex flex-row mb-4 mt-4" v-for="message in currentChat" :class="{'justify-content-end' : message.status === 'sent' , 'justify-content-start' : message.status === 'received'}">
+                    <div class="d-flex flex-row mb-4 mt-4" v-for="(message, i) in currentChat" :class="{'justify-content-end' : message.status === 'sent' , 'justify-content-start' : message.status === 'received'}">
                         <div class="position-text">
-                            <p class="small p-3 ms-4 me-4 mb-2 text-dark rounded-3" :class="{'sent' : message.status === 'sent' , 'received' : message.status === 'received' }"> {{ message.text }} </p>
+                            <p class="small p-3 ms-4 me-4 mb-2 text-dark rounded-3" :class="{'sent' : message.status === 'sent' , 'received' : message.status === 'received' }"> {{ message.text }}
                                 <small class="text-small">{{ getCurrentMoment() }}</small>
+                              
+                            </p>
                         </div>
                         
                     </div>
@@ -119,7 +121,7 @@
 
                 <div class="footer w-100 d-flex justify-content-between align-items-center">
                     <i class="fa-regular fa-face-smile ms-3"></i>
-                    <input type="text" class="form-control sixe-text" aria-label="Text input with radio button" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addMessage">
+                    <input type="text" class="form-control sixe-text" aria-label="Text input with radio button" placeholder="Scrivi un messaggio" v-model.trim="newMessage" @keyup.enter="addMessage">
                     <i class="fa-solid fa-microphone me-3"></i>
 
                 </div>

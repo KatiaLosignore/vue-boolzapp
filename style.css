@@ -122,16 +122,18 @@ small {
     font-size: 15px;
 }
 
-.position-text {
+.position-text p {
     position: relative;
 }
 
 .text-small {
     position: absolute;
-    bottom: 8px;
-    right: 27px;
+    bottom: 2px;
+    right: 5px;
     font-size: 10px;
 }
+
+
 
 .sent, .received {
     width: 250px;
